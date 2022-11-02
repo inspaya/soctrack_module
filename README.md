@@ -30,9 +30,10 @@ to suggest that people in a given area are happy/sad.
 
 ## Team Members
 
-* Muizudeen Kusimo (@inspaya) - Team Lead/Python/ML/DevOpsSec
-* Mojeed Kusimo (@mojeedkusimo) - Front-End Developer/JavaScript
-* Ossai Benjamin () - Python/ML/Data Science
-* Moyinoluwa Olajide (@Devkajabi) - Front-End Developer/JavaScript/Mapping Visualization
-* Tom-Alli Sheu (@IRENIMOYAN) - Front-End Developer
-* Stanley Egbe (@Stan081) - Backend Developer/NodeJS
+* Muizudeen Kusimo @inspaya - Team Lead/Python/ML/DevOpsSec
+* Mojeed Kusimo @mojeedkusimo - Front-End Developer/JavaScript
+* Hadiza Idris @Hadieeyyy - UI/UX
+* Ossai Benjamin @bencoolson - Python/ML/Data Science
+* Moyinoluwa Olajide @Devkajabi - Front-End Developer/JavaScript/Mapping Visualization
+* Tom-Alli Sheu @IRENIMOYAN - Front-End Developer
+* Stanley Egbe @Stan081 - Backend Developer/NodeJS
