@@ -14,7 +14,9 @@ Data Visualization - Let data tell a unique story. Help make decisions and impro
 ## The Output
 
 We will be using custom markers to indicate peoples moods, and based on that, using polylines/polygons 
-to suggest that people in a given area are happy/sad.
+to suggest that people in a given area are happy/sad. 
+
+The product site is available at https://ask.ngmap.live/
 
 ## Technology
 
