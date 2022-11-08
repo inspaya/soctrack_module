@@ -2,10 +2,12 @@
 
 ## Gauging the mood of people in a given area based on conversations they are having
 
-Using data from Twitter, we create a machine-learning model to gauge sentiments of people and use 
-the data obtained to visualize the general mood of society in that pre-defined geographical zone.
+Using data from Twitter, we create a machine-learning model to gauge sentiments of people in response to search queries and use 
+the data obtained to visualize the general mood of society in that pre-defined geographical zone as represented with polygons on a Google Map.
 
-Similar to how we built the eNaira demo website, https://enaira.istemlabsafrica.site/
+See full [project details document]()
+
+Fairly similar to how we built the eNaira Merchant Map demo website, https://enaira.istemlabsafrica.site/
 
 ## Competition Category
 
@@ -28,14 +30,16 @@ The product site is available at https://ask.ngmap.live/
 * Google Maps APIs
   * Geocoding
   * Maps JavaScript
-  * ???
+* Google Natural Language Processing
+* HTML
+* CSS
 
 ## Team Members
 
-* Muizudeen Kusimo @inspaya - Team Lead/Python/ML/DevOpsSec
-* Mojeed Kusimo @mojeedkusimo - Front-End Developer/JavaScript
-* Hadiza Idris @Hadieeyyy - UI/UX
-* Ossai Benjamin @bencoolson - Python/ML/Data Science
-* Moyinoluwa Olajide @Devkajabi - Front-End Developer/JavaScript/Mapping Visualization
-* Tom-Alli Sheu @IRENIMOYAN - Front-End Developer
-* Stanley Egbe @Stan081 - Backend Developer/NodeJS
+* Muizudeen Kusimo [@inspaya](https://github.com/inspaya) - Team Lead/Python/ML/DevOpsSec
+* Mojeed Kusimo [@mojeedkusimo](https://github.com/mojeedkusimo) - Front-End Developer/JavaScript
+* Hadiza Idris [@Hadieeyyy](https://github.com/Hadieeyyy) - UI/UX
+* Ossai Benjamin [@bencoolson](https://github.com/bencoolson) - Python/ML/Data Science
+* Moyinoluwa Olajide [@Devkajabi](https://github.com/Devkajabi) - Front-End Developer/JavaScript/Mapping Visualization
+* Tom-Alli Sheu [@IRENIMOYAN](https://github.com/IRENIMOYAN) - Front-End Developer
+* Stanley Egbe [@Stan081](https://github.com/Stan081) - Backend Developer/NodeJS
