@@ -5,7 +5,7 @@
 Using data from Twitter, we create a machine-learning model to gauge sentiments of people in response to search queries and use 
 the data obtained to visualize the general mood of society in that pre-defined geographical zone as represented with polygons on a Google Map.
 
-See full [project details document]()
+See full [project details document](https://github.com/inspaya/soctrack_module/blob/master/PROJECT_DETAILS.md)
 
 Fairly similar to how we built the eNaira Merchant Map demo website, https://enaira.istemlabsafrica.site/
 
@@ -30,7 +30,7 @@ The product site is available at https://ask.ngmap.live/
 * Google Maps APIs
   * Geocoding
   * Maps JavaScript
-* Google Natural Language Processing
+* Google Natural Language Processing Library
 * HTML
 * CSS
 
