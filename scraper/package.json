@@ -1,0 +1,18 @@
+{
+  "name": "askng",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stanley Egbe",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "needle": "^3.1.0",
+    "twit": "^2.2.11",
+    "twitter-api-sdk": "^1.2.1",
+    "twitter-api-v2": "^1.12.9"
+  }
+}

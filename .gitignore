@@ -1,2 +1,4 @@
+scraper/node_modules/
 .idea/
 demo/main.py
+.env
