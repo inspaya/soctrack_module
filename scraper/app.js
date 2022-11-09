@@ -1,45 +1,23 @@
-
+require('dotenv').config()
 const Twit = require('twit')
-const fs = require('fs')
 
-const apikey = '13Hqw6f9ZIpHgbRjyisGeHOHn'
-const apiSecretKey = 'PI6wM8FozMPPp9PuwxCXK4K0RRrwy2mXMqecwmKu8RBwiI7RyX'
-const accessToken = '3131304285-BIW2u1BzZxa2DVcbJCGTLEFfrkShUenudRmpRYc'
-const accessTokenSecret = 'I0p8V3Tpnn0KAx6BbLEXBJYTDUsSS427dbtLRitHOB09H'
+const apikey = process.env.API_KEY
+const apiKeySecret = process.env.API_KEY_SECRET
+const accessToken = process.env.ACCESS_TOKEN
+const accessTokenSecret = process.env.ACCESS_TOKEN_SECRET
+const token = process.env.BEARER_TOKEN
 
 var T = new Twit({
-    // consumer_key: apikey,
-    // consumer_secret: apiSecretKey,
-    // access_token: accessToken,
-    // access_token_secret: accessTokenSecret,
+    consumer_key: apikey,
+    consumer_secret: apiKeySecret,
+    access_token: accessToken,
+    access_token_secret: accessTokenSecret
 });
 
-var mySearch = process.argv[2]
 
-async function tweets(keywords) {
-    var tweets;
-    T.get('search/tweets', { q: keywords, count: 100 }, function (err, data, response) {
-        tweets = data.statuses;
-        console.log(tweets)
-    })
-    return tweets;
-}
-
-
-var statuses = tweets(mySearch)
-
-filePath = "./response.json"
-var data = JSON.parse(fs.readFileSync(filePath));
-var statuses = []
-
-for(i = 0; i < 8; i++){
-    statuses.push(data)
-}
-console.log(statuses.length)
-
-function sortData(data){
+function sortData(data) {
     var sortedData = []
-    statuses.filter(x => x.user.geo_enabled == false).forEach(element => {
+    data.statuses.forEach(element => {
         myEntry = {
             "created_at": element.created_at,
             "text": element.text,
@@ -59,6 +37,30 @@ function sortData(data){
         sortedData.push(myEntry)
     });
     return sortedData;
-} 
+}
 
-console.log(sortData(statuses.toString()))
+T.get('search/tweets', {
+    q: 'Peter Obi',
+    "tweet.fields": [
+        "geo",
+        "lang",
+        "text"
+    ],
+    "expansions": [
+        "geo.place_id"
+    ],
+    "place.fields": [
+        "contained_within",
+        "country",
+        "country_code",
+        "full_name",
+        "geo",
+        "id",
+        "name",
+        "place_type"
+    ], count: 10000
+}, function (err, data, response) {
+    var tweets = sortData(data)
+    console.log(tweets)
+})
+
