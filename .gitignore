@@ -1,4 +1,7 @@
-scraper/node_modules/
 .idea/
-demo/main.py
 .env
+pyvenv.cfg
+bin/*
+lib/*
+include/*
+scraper/node_modules/
