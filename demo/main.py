@@ -2,7 +2,7 @@ from os import environ
 from string import punctuation
 from typing import Union
 
-from redis import asyncio as aioredis, Redis
+from redis import Redis, from_url
 from redis.commands.search.field import TextField
 from redis.commands.search.query import Query
 from redis.commands.search.indexDefinition import IndexDefinition, IndexType
@@ -26,7 +26,7 @@ RESULT_RADIUS = 1500
 CACHE_EXPIRY_24HRS = 86400
 ASKNGMAP_DEFAULT_MARKER = {"tweet": "AskNGMap.Live", "lat": 8.8941, "lng": 7.1860}
 
-_async_redis_conn = aioredis.from_url(environ.get("REDIS_OM_URL"))
+_redis_conn = from_url(environ.get("REDIS_OM_URL"))
 
 
 class AskNgMapEngine:
@@ -67,7 +67,7 @@ class SocTrackMood(JsonModel):
         return f"<Mood: {self.text} assessed as {self.sentiment}>"
 
     class Meta:
-        database = _async_redis_conn
+        database = _redis_conn
 
 
 app = FastAPI(openapi_url="/api/openapi.json", docs_url="/api/docs", redoc_url=None)
@@ -85,12 +85,12 @@ _search_schema = (
 
 # create a full-text search attached to the Tweet index
 try:
-    _available_ft_indices = [_idx.decode("utf-8") for _idx in _async_redis_conn.execute_command("FT._LIST") if
+    _available_ft_indices = [_idx.decode("utf-8") for _idx in _redis_conn.execute_command("FT._LIST") if
                              _idx is not None]
     if REDIS_SEARCH_QUERY_INDEX in _available_ft_indices:
-        _async_redis_conn.ft(REDIS_SEARCH_QUERY_INDEX).dropindex(delete_documents=False)
+        _redis_conn.ft(REDIS_SEARCH_QUERY_INDEX).dropindex(delete_documents=False)
 
-    _async_redis_conn.ft(REDIS_SEARCH_QUERY_INDEX).create_index(_search_schema, definition=_search_query_index_def)
+    _redis_conn.ft(REDIS_SEARCH_QUERY_INDEX).create_index(_search_schema, definition=_search_query_index_def)
 except ResponseError as e:
     print(e)
 
@@ -99,7 +99,17 @@ class TwitterBridge:
 
     @staticmethod
     async def tweets_analyzer(redis_conn: Redis, new_tweets_list: list):
-        pass
+        _assigned_sentiments = analyze_batch(new_tweets_list)
+        for _tweet in _assigned_sentiments:
+            _scored_tweet = SocTrackMood(
+                tweet=_tweet['tweet'],
+                sentiment=_tweet['sentiment'],
+                lat=_tweet['coordinates'].split(',')[0],
+                lng=_tweet['coordinates'].split(',')[1]
+            )
+
+            # redis_conn.json().set('', '$', _scored_tweet, nx=True)
+            print(_scored_tweet.__repr__())
 
 
 @app.get("/api/v1/search/")
@@ -110,7 +120,7 @@ async def get_search_results(customer_location: Union[str, None] = None, query: 
             customer_location = f"{ASKNGMAP_DEFAULT_MARKER['lng']}, {ASKNGMAP_DEFAULT_MARKER['lat']}"
 
         if query is None:
-            search_results = _async_redis_conn.geosearch(
+            search_results = _redis_conn.geosearch(
                 name="tweet_geospatial_index",
                 longitude=float(customer_location.split(",")[0]),
                 latitude=float(customer_location.split(",")[1]),
@@ -127,7 +137,7 @@ async def get_search_results(customer_location: Union[str, None] = None, query: 
         query = AskNgMapEngine.sanitize_redisearch_query_str(query)
         _search_query = f' (@tweet: ( {query} ) )'
         _search_query = Query(query_string=_search_query).paging(offset=0, num=RESULT_COUNT)
-        search_results = _async_redis_conn.ft(index_name=REDIS_SEARCH_QUERY_INDEX).search(_search_query).docs
+        search_results = _redis_conn.ft(index_name=REDIS_SEARCH_QUERY_INDEX).search(_search_query).docs
 
         if len(search_results) > 0:
             return {"data": search_results}
@@ -140,18 +150,13 @@ async def get_search_results(customer_location: Union[str, None] = None, query: 
 
 @app.post("/api/v1/callbacks/receive_tweets")
 async def ingest_tweet_data(new_tweets_list: list, gmaps_tweet_plotter: BackgroundTasks):
+    response = []
     unprocessed_tweets = []
     try:
-        _tweets_analysed_and_pending_geocoding, _unprocessed_tweets = await TwitterBridge.tweets_analyzer(
-            _async_redis_conn, new_tweets_list
-        )
-
-        # Plot tweet locations in the background, so we can return to Tweet scraping service
-        gmaps_tweet_plotter.add_task(AskNgMapEngine.get_tweet_coords, _tweets_analysed_and_pending_geocoding)
-
+        _tweets_analysed, _unprocessed_tweets = await TwitterBridge.tweets_analyzer(_redis_conn, new_tweets_list)
         unprocessed_tweets = _unprocessed_tweets
-        _registration_count = len(_tweets_analysed_and_pending_geocoding)
-        response = f"{_registration_count} tweets received and geo-tagged."
+        _registration_count = len(_tweets_analysed)
+        response = f"{_registration_count} tweets received and analyzed for sentiment."
     except Exception as e:
         print(e)
 
@@ -167,5 +172,5 @@ async def ingest_tweet_data(new_tweets_list: list, gmaps_tweet_plotter: Backgrou
 
 @app.on_event("startup")
 async def load():
-    aioredis_conn = _async_redis_conn
+    aioredis_conn = _redis_conn
     FastAPICache.init(RedisBackend(aioredis_conn), prefix="askngmap_search_cache")

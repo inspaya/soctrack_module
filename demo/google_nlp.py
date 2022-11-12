@@ -53,7 +53,6 @@ def assign_sentiment(score, magnitude):
 
 
 def generate_sentiments(annotations):
-
     for index, sentence in enumerate(annotations.sentences):
         sentence_text = sentence.text.content
         sentence_sentiment = sentence.sentiment.score
@@ -65,9 +64,6 @@ def generate_sentiments(annotations):
         sentiment = assign_sentiment(sentence_sentiment, sentence_magnitude)
         sentence_sentiment_list.append((sentence.text.content, sentiment,))
 
-    with open('buffer.csv', 'w+') as data_buffer: # TODO: replace with filename of subject in data/tweets/ dir
-        csv_writer = csv.writer(data_buffer)
-        csv_writer.writerows(sentence_sentiment_list)
     return sentence_sentiment_list
 
 
