@@ -15,7 +15,7 @@ from fastapi_cache.decorator import cache
 
 from redis_om.model import Field, JsonModel
 
-from google_nlp import analyze_batch
+from demo.google_nlp import analyze_batch
 
 REDIS_SEARCH_QUERY_INDEX = "search_query_idx"
 EXCLUDED_REDISEARCH_XTERS = [f"{_chr}" for _chr in punctuation]

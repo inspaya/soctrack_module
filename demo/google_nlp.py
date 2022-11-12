@@ -7,9 +7,7 @@ Demonstrates how to make a simple call to the Natural Language API.
 import csv
 import argparse
 
-from google.cloud import language
-from google.cloud.language import enums
-from google.cloud.language import types
+from google.cloud import language_v1
 
 """
 Interpretation of Sentiment Analysis as per guidance from
@@ -55,6 +53,7 @@ def assign_sentiment(score, magnitude):
 
 
 def generate_sentiments(annotations):
+
     for index, sentence in enumerate(annotations.sentences):
         sentence_text = sentence.text.content
         sentence_sentiment = sentence.sentiment.score
@@ -93,12 +92,10 @@ def analyze_batch(content_list):
 
 
 def analyze(content):
-    client = language.LanguageServiceClient()
+    client = language_v1.LanguageServiceClient()
 
-    document = types.Document(
-        content=content,
-        type=enums.Document.Type.PLAIN_TEXT)
-    annotations = client.analyze_sentiment(document=document)
+    document = language_v1.Document(content=content, type_=language_v1.Document.Type.PLAIN_TEXT)
+    annotations = client.analyze_sentiment(request={"document": document})
 
     return generate_sentiments(annotations)
 
@@ -110,7 +107,7 @@ if __name__ == '__main__':
     )
     parser.add_argument(
         'input_filename',
-        help='The filename of the movie review you\'d like to analyze'
+        help='The filename of tweets to analyze'
     )
     args = parser.parse_args()
 
