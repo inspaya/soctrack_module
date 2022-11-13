@@ -62,7 +62,11 @@ def generate_sentiments(annotations):
         ))
 
         sentiment = assign_sentiment(sentence_sentiment, sentence_magnitude)
-        sentence_sentiment_list.append((sentence.text.content, sentiment,))
+        sentiment_payload = {
+            "text": annotations,
+            "sentiment": sentiment
+        }
+        sentence_sentiment_list.append(sentiment_payload)
 
     return sentence_sentiment_list
 
