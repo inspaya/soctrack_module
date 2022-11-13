@@ -98,6 +98,8 @@ function initMap() {
     zoom: 7,
   });
 
+  getCordinates(response);
+
   const positiveCoords = pos;
   const negativeCoords = neg;
   const neutralCoords = nue;
