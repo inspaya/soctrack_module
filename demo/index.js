@@ -52,7 +52,7 @@ var response = {
 }
 var previouslyOpenedInfoWindow = false;
 let map;
-const nigeria = { lat: 9.0065205, lng: 4.1806855 };
+const nigeria = { lat: 9.0065205, lng: 4.1806855, zoom: 11 };
 
 let neg = [];
 let pos = [];
@@ -139,7 +139,7 @@ function initMap() {
   negativePolygon.addListener("click", showNegativeMood);
   neutralPolygon.addListener("click", showNeutralMood);
   
-  infoWindow = new google.maps.infoWindow();
+  infoWindow = new google.maps.InfoWindow();
 }
 
 function showPositiveMood(event) {
