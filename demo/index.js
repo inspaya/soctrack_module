@@ -50,7 +50,7 @@ var response = {
     }
   ]
 }
-
+var previouslyOpenedInfoWindow = false;
 let map;
 const nigeria = { lat: 9.0065205, lng: 4.1806855 };
 
@@ -134,6 +134,42 @@ function initMap() {
   positivePolygon.setMap(map);
   negativePolygon.setMap(map);
   neutralPolygon.setMap(map);
+
+  positivePolygon.addListener("click", showPositiveMood);
+  negativePolygon.addListener("click", showNegativeMood);
+  neutralPolygon.addListener("click", showNeutralMood);
+  
+  infoWindow = new google.maps.infoWindow();
+}
+
+function showPositiveMood(event) {
+  if (previouslyOpenedInfoWindow) {
+    previouslyOpenedInfoWindow.close();
+  }
+  previouslyOpenedInfoWindow = infoWindow;
+  infoWindow.setContent("Fuel is available at good prices here");
+  infoWindow.setPosition(event.latLng);
+  infoWindow.open(map);
+}
+
+function showNegativeMood(event) {
+  if (previouslyOpenedInfoWindow) {
+    previouslyOpenedInfoWindow.close();
+  }
+  previouslyOpenedInfoWindow = infoWindow;
+  infoWindow.setContent("The fuel is bad, please avoid");
+  infoWindow.setPosition(event.latLng);
+  infoWindow.open(map);
+}
+
+function showNeutralMood(event) {
+  if (previouslyOpenedInfoWindow) {
+    previouslyOpenedInfoWindow.close();
+  }
+  previouslyOpenedInfoWindow = infoWindow;
+  infoWindow.setContent("Fuel is uncertain");
+  infoWindow.setPosition(event.latLng);
+  infoWindow.open(map);
 }
 
 window.initMap = initMap;
