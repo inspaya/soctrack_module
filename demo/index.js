@@ -65,7 +65,7 @@ function getCordinates(response) {
     element.positive.forEach(item => {
       let x = {
         'lat': item.lat,
-        'lon': item.lng
+        'lng': item.lng
       }
       pos.push(x)
     })
@@ -73,7 +73,7 @@ function getCordinates(response) {
     element.negative.forEach(item => {
       let x = {
         'lat': item.lat,
-        'lon': item.lng
+        'lng': item.lng
       }
       neg.push(x)
     })
@@ -81,7 +81,7 @@ function getCordinates(response) {
     element.neutral.forEach(item => {
       let x = {
         'lat': item.lat,
-        'lon': item.lng
+        'lng': item.lng
       }
       nue.push(x)
     })
