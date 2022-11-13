@@ -1,5 +1,7 @@
 require('dotenv').config()
 const Twit = require('twit')
+const fs = require('fs')
+const { TwitterApi } = require('twitter-api-v2');
 
 const apikey = process.env.API_KEY
 const apiKeySecret = process.env.API_KEY_SECRET
@@ -25,22 +27,40 @@ function sortData(data) {
             "geo": element.geo,
             "coordinates": element.coordinates,
             "place": element.place,
-            "contributors": element.contributors,
-            "retweeted_status": element.retweeted_status,
-            "favorited": element.favorited,
-            "retweeted": element.retweeted,
-            "possibly_sensitive": element.possibly_sensitive,
-            "filter_level": element.filter_level,
-            "lang": element.lang,
-            "timestamp_ms": element.timestamp_ms
         }
         sortedData.push(myEntry)
     });
     return sortedData;
 }
 
+function jsonReader(filePath, cb) {
+    fs.readFile(filePath, (err, fileData) => {
+        if (err) {
+            return cb && cb(err);
+        }
+        try {
+            const object = JSON.parse(fileData);
+            return cb && cb(null, object);
+        } catch (err) {
+            return cb && cb(err);
+        }
+    });
+}
+
+
+function checkDuplicates(data){
+    var distinct = data.filter( function(){
+        
+    })
+
+}
+
+
+
+
+
 T.get('search/tweets', {
-    q: 'Peter Obi',
+    q: '(Fuel Abuja) OR (Abuja fuel Scarcity) OR (Abuja Pump price) since:2011-07-11 -RT',
     "tweet.fields": [
         "geo",
         "lang",
@@ -58,9 +78,28 @@ T.get('search/tweets', {
         "id",
         "name",
         "place_type"
-    ], count: 10000
-}, function (err, data, response) {
-    var tweets = sortData(data)
-    console.log(tweets)
+    ],
+    "count": 10000,
+    "max_id" :1589978895683825700
+
+}, function (err, data) {
+
+    if (err) console.log(err)
+    else {
+        var tweets = sortData(data)
+        var distinct = checkDuplicates(tweets)
+        jsonReader("../data/response.json", (err, tweetData) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            tweets.forEach(element => tweetData.push(element))
+
+            fs.writeFile("../data/response.json", JSON.stringify(tweetData), err => {
+                if (err) console.log("Error writing file:", err);
+            });
+        });
+    }
+
 })
 
