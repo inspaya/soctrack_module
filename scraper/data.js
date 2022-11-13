@@ -51,9 +51,9 @@ var response = {
   ]
 }
 
-let neg = [];
-let pos = [];
-let nue = [];
+export let neg = [];
+export let pos = [];
+export let nue = [];
 
 export function getCordinates(response) {
   let cordData = response.data;
