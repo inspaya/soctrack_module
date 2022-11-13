@@ -52,7 +52,7 @@ var response = {
 }
 var previouslyOpenedInfoWindow = false;
 let map;
-const nigeria = { lat: 9.0065205, lng: 4.1806855};
+const nigeria = { lat: 9.0065205, lng: 7.491302};
 
 let neg = [];
 let pos = [];
