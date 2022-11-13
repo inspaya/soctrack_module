@@ -48,8 +48,19 @@ function jsonReader(filePath, cb) {
 }
 
 
+function checkDuplicates(data){
+    var distinct = data.filter( function(){
+        
+    })
+
+}
+
+
+
+
+
 T.get('search/tweets', {
-    q: '("Fuel in Abuja") OR ("Abuja fuel Scarcity") OR (Abuja "Pump price") since:2011-07-11 -RT',
+    q: '(Fuel Abuja) OR (Abuja fuel Scarcity) OR (Abuja Pump price) since:2011-07-11 -RT',
     "tweet.fields": [
         "geo",
         "lang",
@@ -69,20 +80,19 @@ T.get('search/tweets', {
         "place_type"
     ],
     "count": 10000,
-    //"max_id" :1590018283000193000
+    "max_id" :1589978895683825700
 
 }, function (err, data) {
 
     if (err) console.log(err)
     else {
-        let data2 = new Set(data.statuses)
         var tweets = sortData(data)
+        var distinct = checkDuplicates(tweets)
         jsonReader("../data/response.json", (err, tweetData) => {
             if (err) {
                 console.log(err);
                 return;
             }
-            console.log(tweetData.length)
             tweets.forEach(element => tweetData.push(element))
 
             fs.writeFile("../data/response.json", JSON.stringify(tweetData), err => {
