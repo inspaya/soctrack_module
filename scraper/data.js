@@ -51,21 +51,18 @@ var response = {
   ]
 }
 
-let map;
-const nigeria = { lat: 9.0065205, lng: 4.1806855 };
+export let neg = [];
+export let pos = [];
+export let nue = [];
 
-let neg = [];
-let pos = [];
-let nue = [];
-
-function getCordinates(response) {
+export function getCordinates(response) {
   let cordData = response.data;
 
   cordData.forEach(element => {
     element.positive.forEach(item => {
       let x = {
         'lat': item.lat,
-        'lng': item.lng
+        'lon': item.lng
       }
       pos.push(x)
     })
@@ -73,7 +70,7 @@ function getCordinates(response) {
     element.negative.forEach(item => {
       let x = {
         'lat': item.lat,
-        'lng': item.lng
+        'lon': item.lng
       }
       neg.push(x)
     })
@@ -81,7 +78,7 @@ function getCordinates(response) {
     element.neutral.forEach(item => {
       let x = {
         'lat': item.lat,
-        'lng': item.lng
+        'lon': item.lng
       }
       nue.push(x)
     })
@@ -91,49 +88,3 @@ function getCordinates(response) {
   console.log(pos)
   console.log(nue)
 }
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: nigeria,
-    zoom: 7,
-  });
-
-  getCordinates(response);
-
-  const positiveCoords = pos;
-  const negativeCoords = neg;
-  const neutralCoords = nue;
-
-  const positivePolygon = new google.maps.Polygon({
-    paths: positiveCoords,
-    strokeColor: "#FF0000",
-    strokeOpacity: 0.7,
-    strokeWeight: 2,
-    fillColor: "#2e7119",
-    fillOpacity: 0.35,
-  });
-
-  const negativePolygon = new google.maps.Polygon({
-    paths: negativeCoords,
-    strokeColor: "#FF0000",
-    strokeOpacity: 0.7,
-    strokeWeight: 2,
-    fillColor: "#dd360f",
-    fillOpacity: 0.35,
-  });
-
-  const neutralPolygon = new google.maps.Polygon({
-    paths: neutralCoords,
-    strokeColor: "#FF0000",
-    strokeOpacity: 0.7,
-    strokeWeight: 2,
-    fillColor: "#cfa246",
-    fillOpacity: 0.35,
-  });
-
-  positivePolygon.setMap(map);
-  negativePolygon.setMap(map);
-  neutralPolygon.setMap(map);
-}
-
-window.initMap = initMap;

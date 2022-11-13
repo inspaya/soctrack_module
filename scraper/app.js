@@ -64,8 +64,20 @@ function checkDuplicates(data) {
 }
 
 
+function checkDuplicates(data){
+    var distinct = data.filter( function(){
+        
+    })
+
+}
+
+
+
+
+
 T.get('search/tweets', {
     q: '(Fuel in Abuja) OR (Abuja fuel Scarcity) OR (Abuja "Pump price") since:2011-07-11 -RT -from:@',
+
     "tweet.fields": [
         "geo",
         "lang",
@@ -86,6 +98,7 @@ T.get('search/tweets', {
         "place_type"
     ],
     "count": 10000,
+
     "max_id": 1589659499450830800
 
 }, function (err, data) {
@@ -93,6 +106,7 @@ T.get('search/tweets', {
     else {
         var tweets = sortData(data)
         jsonReader("response.json", (err, tweetData) => {
+
             if (err) {
                 console.log(err);
                 return;

@@ -1,4 +1,9 @@
-scraper/node_modules/
 .idea/
-demo/main.py
 .env
+*.notes
+pyvenv.cfg
+ngmap_sa.json
+bin/*
+lib/*
+include/*
+scraper/node_modules/
