@@ -21,7 +21,15 @@ header {
     align-items: center;
 }
 
-  
+  .logo {
+    position: absolute;
+    width: 258px;
+    height: 67px;
+    left: 735px;
+    top: 35px;
+    
+    background: url(try);
+  }
   .controls {
     margin-top: 16x;
     border: 1px solid transparent;
@@ -81,3 +89,4 @@ border-radius: 100px;
     font-size: 13px;
     font-weight: 300;
   }
+
