@@ -2,7 +2,7 @@
 .env
 *.notes
 pyvenv.cfg
-ngmap-sa.json
+ngmap_sa.json
 bin/*
 lib/*
 include/*

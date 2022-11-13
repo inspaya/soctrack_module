@@ -30,7 +30,7 @@ The product site is available at https://ask.ngmap.live/
 * Google Maps APIs
   * Geocoding
   * Maps JavaScript
-* Google Natural Language Processing Library
+* Google Cloud Natural Language API
 * HTML
 * CSS
 
