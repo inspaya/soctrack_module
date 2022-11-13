@@ -1,7 +1,8 @@
 require('dotenv').config()
 const Twit = require('twit')
 const fs = require('fs')
-const { TwitterApi } = require('twitter-api-v2');
+const request = require('request')
+
 
 const apikey = process.env.API_KEY
 const apiKeySecret = process.env.API_KEY_SECRET
@@ -22,7 +23,7 @@ function sortData(data) {
     data.statuses.forEach(element => {
         myEntry = {
             "created_at": element.created_at,
-            "text": element.text,
+            "text": element.full_text,
             "truncated": element.truncated,
             "geo": element.geo,
             "coordinates": element.coordinates,
@@ -47,14 +48,30 @@ function jsonReader(filePath, cb) {
     });
 }
 
+function checkDuplicates(data) {
+    let distinct_tweets = []
+    let tweet_included = []
+    data.forEach(tweet => {
+        let tweet_parts = tweet.text.split("https")
+        let text = tweet_parts[0].toLowerCase()
+
+        if (!tweet_included.includes(text)) {
+            distinct_tweets.push(tweet)
+            tweet_included.push(text)
+        }
+    })
+    return distinct_tweets;
+}
+
 
 T.get('search/tweets', {
-    q: '("Fuel in Abuja") OR ("Abuja fuel Scarcity") OR (Abuja "Pump price") since:2011-07-11 -RT',
+    q: '(Fuel in Abuja) OR (Abuja fuel Scarcity) OR (Abuja "Pump price") since:2011-07-11 -RT -from:@',
     "tweet.fields": [
         "geo",
         "lang",
         "text"
     ],
+    "tweet_mode": "extended",
     "expansions": [
         "geo.place_id"
     ],
@@ -69,27 +86,47 @@ T.get('search/tweets', {
         "place_type"
     ],
     "count": 10000,
-    //"max_id" :1590018283000193000
+    "max_id": 1589659499450830800
 
 }, function (err, data) {
-
     if (err) console.log(err)
     else {
-        let data2 = new Set(data.statuses)
         var tweets = sortData(data)
-        jsonReader("../data/response.json", (err, tweetData) => {
+        jsonReader("response.json", (err, tweetData) => {
             if (err) {
                 console.log(err);
                 return;
             }
-            console.log(tweetData.length)
             tweets.forEach(element => tweetData.push(element))
 
-            fs.writeFile("../data/response.json", JSON.stringify(tweetData), err => {
+            fs.writeFile("response.json", JSON.stringify(tweetData), err => {
                 if (err) console.log("Error writing file:", err);
+                jsonReader("response.json", (err, tweetData) => {
+                    if (err) {
+                        console.log(err);
+                        return;
+                    }
+                    let distinctTweets = checkDuplicates(tweetData)
+                    let jsonTweets = JSON.stringify(distinctTweets)
+
+                    fs.writeFile("../data/response.json", jsonTweets, err => {
+                        if (err) console.log("Error writing file:", err);
+
+                            request.post('https://ask.ngmap.live/api/docs',
+                            {json : jsonTweets}, function(err, res, body){
+                                if(!err && res.statusCode == 200){
+                                    console.log(body)
+                                }
+                            }
+                        )
+
+                    });
+                });
+
             });
         });
     }
 
 })
+
 
