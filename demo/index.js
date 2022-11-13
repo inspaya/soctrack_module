@@ -95,7 +95,7 @@ function getCordinates(response) {
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: nigeria,
-    zoom: 11,
+    zoom: 9,
   });
 
   getCordinates(response);
