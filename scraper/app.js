@@ -64,19 +64,11 @@ function checkDuplicates(data) {
 }
 
 
-function checkDuplicates(data){
-    var distinct = data.filter( function(){
-        
-    })
-
-}
-
-
 
 
 
 T.get('search/tweets', {
-    q: '(Fuel in Abuja) OR (Abuja fuel Scarcity) OR (Abuja "Pump price") since:2011-07-11 -RT -from:@',
+    q: '(Fuel in Abuja) OR (Abuja fuel Scarcity) OR (Abuja "Pump price") since:2011-07-11 -RT',
 
     "tweet.fields": [
         "geo",
