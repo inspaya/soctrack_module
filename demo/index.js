@@ -100,7 +100,7 @@ function initMap() {
 
   const positiveCoords = pos;
   const negativeCoords = neg;
-  const neutralCoords = neu;
+  const neutralCoords = nue;
 
   const positivePolygon = new google.maps.Polygon({
     paths: positiveCoords,
