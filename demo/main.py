@@ -114,7 +114,7 @@ class TwitterBridge:
 
 
 @app.get("/api/v1/search/")
-@cache(expire=CACHE_EXPIRY_24HRS)
+# @cache(expire=CACHE_EXPIRY_24HRS)
 async def get_search_results(customer_location: Union[str, None] = None, query: Union[str, None] = None):
     try:
         if customer_location is None:
