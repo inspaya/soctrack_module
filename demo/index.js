@@ -52,7 +52,7 @@ var response = {
 }
 var previouslyOpenedInfoWindow = false;
 let map;
-const nigeria = { lat: 9.0065205, lng: 4.1806855, zoom: 11 };
+const nigeria = { lat: 9.0065205, lng: 4.1806855};
 
 let neg = [];
 let pos = [];
@@ -95,7 +95,7 @@ function getCordinates(response) {
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: nigeria,
-    zoom: 7,
+    zoom: 11,
   });
 
   getCordinates(response);
@@ -147,7 +147,7 @@ function showPositiveMood(event) {
     previouslyOpenedInfoWindow.close();
   }
   previouslyOpenedInfoWindow = infoWindow;
-  infoWindow.setContent("Fuel is available at good prices here");
+  infoWindow.setContent("Fuel is available at good prices here!");
   infoWindow.setPosition(event.latLng);
   infoWindow.open(map);
 }
@@ -157,7 +157,7 @@ function showNegativeMood(event) {
     previouslyOpenedInfoWindow.close();
   }
   previouslyOpenedInfoWindow = infoWindow;
-  infoWindow.setContent("The fuel is bad, please avoid");
+  infoWindow.setContent("The fuel situation is bad in this area, please avoid");
   infoWindow.setPosition(event.latLng);
   infoWindow.open(map);
 }
@@ -167,7 +167,7 @@ function showNeutralMood(event) {
     previouslyOpenedInfoWindow.close();
   }
   previouslyOpenedInfoWindow = infoWindow;
-  infoWindow.setContent("Fuel is uncertain");
+  infoWindow.setContent("The fuel situation is uncertain in this area");
   infoWindow.setPosition(event.latLng);
   infoWindow.open(map);
 }
