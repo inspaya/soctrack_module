@@ -1,649 +1,226 @@
-{
-    "created_at": "Tue Feb 27 21:11:40 +0000 2018",
-    "id": 968594506663669800,
-    "id_str": "968594506663669760",
-    "text": "RT @honeydrop_506: 180222 ICN #백현 #BAEKHYUNnn나의 겨울과 너nn#iHeartAwards #BestFanArmy #EXOL @weareoneEXO https://t.co/hg7I3xAlBg",
+[
+  {
+    "created_at": "Sat Nov 12 15:34:32 +0000 2022",
+    "text": "Fuel Scarcity: Pump Price Hits N285/Litre In Some Parts Of Abuja https://t.co/4ot8fmClzh",
     "truncated": false,
-    "in_reply_to_status_id": null,
-    "in_reply_to_status_id_str": null,
-    "in_reply_to_user_id": null,
-    "in_reply_to_user_id_str": null,
-    "in_reply_to_screen_name": null,
-    "user": {
-      "id": 4448809940,
-      "id_str": "4448809940",
-      "name": "ayah",
-      "screen_name": "lovbyun",
-      "location": "bbh iu jjh pcy kjd dks",
-      "url": "https://curiouscat.me/baekhyun-l",
-      "description": "hi hello I love exo",
-      "translator_type": "none",
-      "protected": false,
-      "verified": false,
-      "followers_count": 1142,
-      "friends_count": 125,
-      "listed_count": 20,
-      "favourites_count": 5712,
-      "statuses_count": 4011,
-      "created_at": "Fri Dec 04 03:44:59 +0000 2015",
-      "utc_offset": -28800,
-      "time_zone": "Pacific Time (US & Canada)",
-      "geo_enabled": false,
-      "lang": "en",
-      "contributors_enabled": false,
-      "is_translator": false,
-      "profile_background_color": "000000",
-      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-      "profile_background_tile": false,
-      "profile_link_color": "F58EA8",
-      "profile_sidebar_border_color": "000000",
-      "profile_sidebar_fill_color": "000000",
-      "profile_text_color": "000000",
-      "profile_use_background_image": false,
-      "profile_image_url": "http://pbs.twimg.com/profile_images/967130320259526656/0xZ-wxXJ_normal.jpg",
-      "profile_image_url_https": "https://pbs.twimg.com/profile_images/967130320259526656/0xZ-wxXJ_normal.jpg",
-      "profile_banner_url": "https://pbs.twimg.com/profile_banners/4448809940/1519340670",
-      "default_profile": false,
-      "default_profile_image": false,
-      "following": null,
-      "follow_request_sent": null,
-      "notifications": null
-    },
     "geo": null,
     "coordinates": null,
-    "place": null,
-    "contributors": null,
-    "retweeted_status": { 
-      "created_at": "Mon Feb 26 14:25:59 +0000 2018",
-      "id": 968130023566684200,
-      "id_str": "968130023566684160",
-      "text": "180222 ICN #백현 #BAEKHYUNnn나의 겨울과 너nn#iHeartAwards #BestFanArmy #EXOL @weareoneEXO https://t.co/hg7I3xAlBg",
-      "display_text_range": [
-        0,
-        81
-      ],
-      "truncated": false,
-      "in_reply_to_status_id": null,
-      "in_reply_to_status_id_str": null,
-      "in_reply_to_user_id": null,
-      "in_reply_to_user_id_str": null,
-      "in_reply_to_screen_name": null,
-      "user": {
-        "id": 785503802761683000,
-        "id_str": "785503802761682944",
-        "name": "HONEY DROP 🍯",
-        "screen_name": "honeydrop_506",
-        "location": "백현 마음 속 ‘ㅅ’",
-        "url": null,
-        "description": "좋아해, 백현아 ❤️ / 로고크롭 2차가공 상업적이용 ❌ 고화질은 마음 / Do not QT / 사담 @BHoney___",
-        "translator_type": "none",
-        "protected": false,
-        "verified": false,
-        "followers_count": 32861,
-        "friends_count": 10,
-        "listed_count": 746,
-        "favourites_count": 184,
-        "statuses_count": 1220,
-        "created_at": "Mon Oct 10 15:34:35 +0000 2016",
-        "utc_offset": 32400,
-        "time_zone": "Seoul",
-        "geo_enabled": false,
-        "lang": "ko",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "profile_background_color": "000000",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-        "profile_background_tile": false,
-        "profile_link_color": "F58EA8",
-        "profile_sidebar_border_color": "000000",
-        "profile_sidebar_fill_color": "000000",
-        "profile_text_color": "000000",
-        "profile_use_background_image": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/956172776506761217/TCBwtjU1_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/956172776506761217/TCBwtjU1_normal.jpg",
-        "profile_banner_url": "https://pbs.twimg.com/profile_banners/785503802761682944/1516948135",
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": null,
-        "follow_request_sent": null,
-        "notifications": null
-      },
-      "geo": null,
-      "coordinates": null,
-      "place": null,
-      "contributors": null,
-      "is_quote_status": false,
-      "quote_count": 15,
-      "reply_count": 1,
-      "retweet_count": 4119,
-      "favorite_count": 1610,
-      "entities": {
-        "hashtags": [
-          {
-            "text": "백현",
-            "indices": [
-              11,
-              14
-            ]
-          },
-          {
-            "text": "BAEKHYUN",
-            "indices": [
-              15,
-              24
-            ]
-          },
-          {
-            "text": "iHeartAwards",
-            "indices": [
-              36,
-              49
-            ]
-          },
-          {
-            "text": "BestFanArmy",
-            "indices": [
-              50,
-              62
-            ]
-          },
-          {
-            "text": "EXOL",
-            "indices": [
-              63,
-              68
-            ]
-          }
-        ],
-        "urls": [],
-        "user_mentions": [
-          {
-            "screen_name": "weareoneEXO",
-            "name": "EXO",
-            "id": 873115441303924700,
-            "id_str": "873115441303924736",
-            "indices": [
-              69,
-              81
-            ]
-          }
-        ],
-        "symbols": [],
-        "media": [
-          {
-            "id": 968129121061490700,
-            "id_str": "968129121061490690",
-            "indices": [
-              82,
-              105
-            ],
-            "media_url": "http://pbs.twimg.com/media/DW98TmWU0AItmlv.jpg",
-            "media_url_https": "https://pbs.twimg.com/media/DW98TmWU0AItmlv.jpg",
-            "url": "https://t.co/hg7I3xAlBg",
-            "display_url": "pic.twitter.com/hg7I3xAlBg",
-            "expanded_url": "https://twitter.com/honeydrop_506/status/968130023566684160/photo/1",
-            "type": "photo",
-            "sizes": {
-              "thumb": {
-                "w": 150,
-                "h": 150,
-                "resize": "crop"
-              },
-              "medium": {
-                "w": 800,
-                "h": 1200,
-                "resize": "fit"
-              },
-              "small": {
-                "w": 453,
-                "h": 680,
-                "resize": "fit"
-              },
-              "large": {
-                "w": 1000,
-                "h": 1500,
-                "resize": "fit"
-              }
-            }
-          }
-        ]
-      },
-      "extended_entities": {
-        "media": [
-          {
-            "id": 968129121061490700,
-            "id_str": "968129121061490690",
-            "indices": [
-              82,
-              105
-            ],
-            "media_url": "http://pbs.twimg.com/media/DW98TmWU0AItmlv.jpg",
-            "media_url_https": "https://pbs.twimg.com/media/DW98TmWU0AItmlv.jpg",
-            "url": "https://t.co/hg7I3xAlBg",
-            "display_url": "pic.twitter.com/hg7I3xAlBg",
-            "expanded_url": "https://twitter.com/honeydrop_506/status/968130023566684160/photo/1",
-            "type": "photo",
-            "sizes": {
-              "thumb": {
-                "w": 150,
-                "h": 150,
-                "resize": "crop"
-              },
-              "medium": {
-                "w": 800,
-                "h": 1200,
-                "resize": "fit"
-              },
-              "small": {
-                "w": 453,
-                "h": 680,
-                "resize": "fit"
-              },
-              "large": {
-                "w": 1000,
-                "h": 1500,
-                "resize": "fit"
-              }
-            }
-          },
-          {
-            "id": 968129133724053500,
-            "id_str": "968129133724053505",
-            "indices": [
-              82,
-              105
-            ],
-            "media_url": "http://pbs.twimg.com/media/DW98UVhUMAE-81s.jpg",
-            "media_url_https": "https://pbs.twimg.com/media/DW98UVhUMAE-81s.jpg",
-            "url": "https://t.co/hg7I3xAlBg",
-            "display_url": "pic.twitter.com/hg7I3xAlBg",
-            "expanded_url": "https://twitter.com/honeydrop_506/status/968130023566684160/photo/1",
-            "type": "photo",
-            "sizes": {
-              "medium": {
-                "w": 800,
-                "h": 1200,
-                "resize": "fit"
-              },
-              "large": {
-                "w": 1000,
-                "h": 1500,
-                "resize": "fit"
-              },
-              "thumb": {
-                "w": 150,
-                "h": 150,
-                "resize": "crop"
-              },
-              "small": {
-                "w": 453,
-                "h": 680,
-                "resize": "fit"
-              }
-            }
-          },
-          {
-            "id": 968129145354952700,
-            "id_str": "968129145354952704",
-            "indices": [
-              82,
-              105
-            ],
-            "media_url": "http://pbs.twimg.com/media/DW98VA2VoAAdEU4.jpg",
-            "media_url_https": "https://pbs.twimg.com/media/DW98VA2VoAAdEU4.jpg",
-            "url": "https://t.co/hg7I3xAlBg",
-            "display_url": "pic.twitter.com/hg7I3xAlBg",
-            "expanded_url": "https://twitter.com/honeydrop_506/status/968130023566684160/photo/1",
-            "type": "photo",
-            "sizes": {
-              "thumb": {
-                "w": 150,
-                "h": 150,
-                "resize": "crop"
-              },
-              "small": {
-                "w": 453,
-                "h": 680,
-                "resize": "fit"
-              },
-              "medium": {
-                "w": 800,
-                "h": 1200,
-                "resize": "fit"
-              },
-              "large": {
-                "w": 1000,
-                "h": 1500,
-                "resize": "fit"
-              }
-            }
-          },
-          {
-            "id": 968129158457966600,
-            "id_str": "968129158457966593",
-            "indices": [
-              82,
-              105
-            ],
-            "media_url": "http://pbs.twimg.com/media/DW98VxqVwAE_IM3.jpg",
-            "media_url_https": "https://pbs.twimg.com/media/DW98VxqVwAE_IM3.jpg",
-            "url": "https://t.co/hg7I3xAlBg",
-            "display_url": "pic.twitter.com/hg7I3xAlBg",
-            "expanded_url": "https://twitter.com/honeydrop_506/status/968130023566684160/photo/1",
-            "type": "photo",
-            "sizes": {
-              "medium": {
-                "w": 800,
-                "h": 1200,
-                "resize": "fit"
-              },
-              "thumb": {
-                "w": 150,
-                "h": 150,
-                "resize": "crop"
-              },
-              "large": {
-                "w": 1000,
-                "h": 1500,
-                "resize": "fit"
-              },
-              "small": {
-                "w": 453,
-                "h": 680,
-                "resize": "fit"
-              }
-            }
-          }
-        ]
-      },
-      "favorited": false,
-      "retweeted": false,
-      "possibly_sensitive": false,
-      "filter_level": "low",
-      "lang": "ko"
-    },
-    "is_quote_status": false,
-    "quote_count": 0,
-    "reply_count": 0,
-    "retweet_count": 0,
-    "favorite_count": 0,
-    "entities": {
-      "hashtags": [
-        {
-          "text": "백현",
-          "indices": [
-            30,
-            33
-          ]
-        },
-        {
-          "text": "BAEKHYUN",
-          "indices": [
-            34,
-            43
-          ]
-        },
-        {
-          "text": "iHeartAwards",
-          "indices": [
-            55,
-            68
-          ]
-        },
-        {
-          "text": "BestFanArmy",
-          "indices": [
-            69,
-            81
-          ]
-        },
-        {
-          "text": "EXOL",
-          "indices": [
-            82,
-            87
-          ]
-        }
-      ],
-      "urls": [],
-      "user_mentions": [
-        {
-          "screen_name": "honeydrop_506",
-          "name": "HONEY DROP 🍯",
-          "id": 785503802761683000,
-          "id_str": "785503802761682944",
-          "indices": [
-            3,
-            17
-          ]
-        },
-        {
-          "screen_name": "weareoneEXO",
-          "name": "EXO",
-          "id": 873115441303924700,
-          "id_str": "873115441303924736",
-          "indices": [
-            88,
-            100
-          ]
-        }
-      ],
-      "symbols": [],
-      "media": [
-        {
-          "id": 968129121061490700,
-          "id_str": "968129121061490690",
-          "indices": [
-            101,
-            124
-          ],
-          "media_url": "http://pbs.twimg.com/media/DW98TmWU0AItmlv.jpg",
-          "media_url_https": "https://pbs.twimg.com/media/DW98TmWU0AItmlv.jpg",
-          "url": "https://t.co/hg7I3xAlBg",
-          "display_url": "pic.twitter.com/hg7I3xAlBg",
-          "expanded_url": "https://twitter.com/honeydrop_506/status/968130023566684160/photo/1",
-          "type": "photo",
-          "sizes": {
-            "thumb": {
-              "w": 150,
-              "h": 150,
-              "resize": "crop"
-            },
-            "medium": {
-              "w": 800,
-              "h": 1200,
-              "resize": "fit"
-            },
-            "small": {
-              "w": 453,
-              "h": 680,
-              "resize": "fit"
-            },
-            "large": {
-              "w": 1000,
-              "h": 1500,
-              "resize": "fit"
-            }
-          },
-          "source_status_id": 968130023566684200,
-          "source_status_id_str": "968130023566684160",
-          "source_user_id": 785503802761683000,
-          "source_user_id_str": "785503802761682944"
-        }
-      ]
-    },
-    "extended_entities": {
-      "media": [
-        {
-          "id": 968129121061490700,
-          "id_str": "968129121061490690",
-          "indices": [
-            101,
-            124
-          ],
-          "media_url": "http://pbs.twimg.com/media/DW98TmWU0AItmlv.jpg",
-          "media_url_https": "https://pbs.twimg.com/media/DW98TmWU0AItmlv.jpg",
-          "url": "https://t.co/hg7I3xAlBg",
-          "display_url": "pic.twitter.com/hg7I3xAlBg",
-          "expanded_url": "https://twitter.com/honeydrop_506/status/968130023566684160/photo/1",
-          "type": "photo",
-          "sizes": {
-            "thumb": {
-              "w": 150,
-              "h": 150,
-              "resize": "crop"
-            },
-            "medium": {
-              "w": 800,
-              "h": 1200,
-              "resize": "fit"
-            },
-            "small": {
-              "w": 453,
-              "h": 680,
-              "resize": "fit"
-            },
-            "large": {
-              "w": 1000,
-              "h": 1500,
-              "resize": "fit"
-            }
-          },
-          "source_status_id": 968130023566684200,
-          "source_status_id_str": "968130023566684160",
-          "source_user_id": 785503802761683000,
-          "source_user_id_str": "785503802761682944"
-        },
-        {
-          "id": 968129133724053500,
-          "id_str": "968129133724053505",
-          "indices": [
-            101,
-            124
-          ],
-          "media_url": "http://pbs.twimg.com/media/DW98UVhUMAE-81s.jpg",
-          "media_url_https": "https://pbs.twimg.com/media/DW98UVhUMAE-81s.jpg",
-          "url": "https://t.co/hg7I3xAlBg",
-          "display_url": "pic.twitter.com/hg7I3xAlBg",
-          "expanded_url": "https://twitter.com/honeydrop_506/status/968130023566684160/photo/1",
-          "type": "photo",
-          "sizes": {
-            "medium": {
-              "w": 800,
-              "h": 1200,
-              "resize": "fit"
-            },
-            "large": {
-              "w": 1000,
-              "h": 1500,
-              "resize": "fit"
-            },
-            "thumb": {
-              "w": 150,
-              "h": 150,
-              "resize": "crop"
-            },
-            "small": {
-              "w": 453,
-              "h": 680,
-              "resize": "fit"
-            }
-          },
-          "source_status_id": 968130023566684200,
-          "source_status_id_str": "968130023566684160",
-          "source_user_id": 785503802761683000,
-          "source_user_id_str": "785503802761682944"
-        },
-        {
-          "id": 968129145354952700,
-          "id_str": "968129145354952704",
-          "indices": [
-            101,
-            124
-          ],
-          "media_url": "http://pbs.twimg.com/media/DW98VA2VoAAdEU4.jpg",
-          "media_url_https": "https://pbs.twimg.com/media/DW98VA2VoAAdEU4.jpg",
-          "url": "https://t.co/hg7I3xAlBg",
-          "display_url": "pic.twitter.com/hg7I3xAlBg",
-          "expanded_url": "https://twitter.com/honeydrop_506/status/968130023566684160/photo/1",
-          "type": "photo",
-          "sizes": {
-            "thumb": {
-              "w": 150,
-              "h": 150,
-              "resize": "crop"
-            },
-            "small": {
-              "w": 453,
-              "h": 680,
-              "resize": "fit"
-            },
-            "medium": {
-              "w": 800,
-              "h": 1200,
-              "resize": "fit"
-            },
-            "large": {
-              "w": 1000,
-              "h": 1500,
-              "resize": "fit"
-            }
-          },
-          "source_status_id": 968130023566684200,
-          "source_status_id_str": "968130023566684160",
-          "source_user_id": 785503802761683000,
-          "source_user_id_str": "785503802761682944"
-        },
-        {
-          "id": 968129158457966600,
-          "id_str": "968129158457966593",
-          "indices": [
-            101,
-            124
-          ],
-          "media_url": "http://pbs.twimg.com/media/DW98VxqVwAE_IM3.jpg",
-          "media_url_https": "https://pbs.twimg.com/media/DW98VxqVwAE_IM3.jpg",
-          "url": "https://t.co/hg7I3xAlBg",
-          "display_url": "pic.twitter.com/hg7I3xAlBg",
-          "expanded_url": "https://twitter.com/honeydrop_506/status/968130023566684160/photo/1",
-          "type": "photo",
-          "sizes": {
-            "medium": {
-              "w": 800,
-              "h": 1200,
-              "resize": "fit"
-            },
-            "thumb": {
-              "w": 150,
-              "h": 150,
-              "resize": "crop"
-            },
-            "large": {
-              "w": 1000,
-              "h": 1500,
-              "resize": "fit"
-            },
-            "small": {
-              "w": 453,
-              "h": 680,
-              "resize": "fit"
-            }
-          },
-          "source_status_id": 968130023566684200,
-          "source_status_id_str": "968130023566684160",
-          "source_user_id": 785503802761683000,
-          "source_user_id_str": "785503802761682944"
-        }
-      ]
-    },
-    "favorited": false,
-    "retweeted": false,
-    "possibly_sensitive": false,
-    "filter_level": "low",
-    "lang": "ko",
-    "timestamp_ms": "1519765900661"
-}
-  
-  
+    "place": null
+  },
+  {
+    "created_at": "Sat Nov 12 13:21:53 +0000 2022",
+    "text": "Pump Price Hits N285/Litre In Some Parts Of Abuja https://t.co/Xo45rpeimY",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Sat Nov 12 12:36:18 +0000 2022",
+    "text": "Pump Price Hits N285/Litre In Some Parts Of Abuja https://t.co/xY1Ofxwvyl",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Sat Nov 12 12:36:06 +0000 2022",
+    "text": "Pump Price Hits N285/Litre In Some Parts Of Abuja https://t.co/oLVxBJBLWJ",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Sat Nov 12 12:36:04 +0000 2022",
+    "text": "Fuel Scarcity: Pump Price Hits N285/Litre In Some Parts Of Abuja https://t.co/ZSD4G3SZ4R via @NaijaNews #NaijaNews",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Sat Nov 12 12:36:02 +0000 2022",
+    "text": "Pump Price Hits N285/Litre In Some Parts Of Abuja https://t.co/3kwcIBhDn4",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Sat Nov 12 12:32:50 +0000 2022",
+    "text": "Fuel Scarcity: Pump Price Hits N285/Litre In Some Parts Of Abuja https://t.co/nNdXtJ04iA",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Sat Nov 12 12:32:49 +0000 2022",
+    "text": "Fuel Scarcity: Pump Price Hits N285/Litre In Some Parts Of Abuja https://t.co/2m3jXxX6th",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Sat Nov 12 12:32:47 +0000 2022",
+    "text": "Fuel Scarcity: Pump Price Hits N285/Litre In Some Parts Of Abuja https://t.co/Y8xShW4t6P",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Sat Nov 12 09:43:02 +0000 2022",
+    "text": "Fuel Pump Price Hits N285 In FCT: Many fuel stations within the Abuja metropolis of the Federal Capital Territory h… https://t.co/8sXJKN8UFG",
+    "truncated": true,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Sat Nov 12 08:52:08 +0000 2022",
+    "text": "I wonder how churches that run fuel for services manage in this Abuja fuel scarcity. \n\nPlease plug your contacts.",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Sat Nov 12 08:27:19 +0000 2022",
+    "text": "If you need fuel in Abuja, main NNPC is selling and there’s no queue.",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Sat Nov 12 07:41:01 +0000 2022",
+    "text": "Fuel pump price hits N285 in FCT\n\nAccording to reports fuel stations within the Abuja metropolis of the Federal Cap… https://t.co/H6H4JA8xru",
+    "truncated": true,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Fri Nov 11 15:11:26 +0000 2022",
+    "text": "Abuja fuel scarcity is Spiritual , I need a ⛽ fuel attendant girlfriend 😜 https://t.co/rUNrptNizx",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Fri Nov 11 11:45:53 +0000 2022",
+    "text": "The fuel queues in Abuja are reducing. Almost all the Petrol Stations on airport road are selling fuel, and pump pr… https://t.co/k2EGuGQmkd",
+    "truncated": true,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Thu Nov 10 18:29:36 +0000 2022",
+    "text": "NNPC GMD, Mele Kyari, says the NNPC cannot maintain a pump price of 170 Naira per litre for petrol.\n\nKyari spoke at… https://t.co/KcSoXb3V4T",
+    "truncated": true,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Thu Nov 10 10:19:19 +0000 2022",
+    "text": "Hopefully, this flood will recede soon so the tankers can cross Kogi and we can finally have fuel in Abuja.",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Thu Nov 10 10:09:54 +0000 2022",
+    "text": "@thecableng @MKKyari What are Dy waiting for? Dy are even wasting time, it doesn't concern Nigerians, for going to… https://t.co/ngGyrq3djf",
+    "truncated": true,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Thu Nov 10 08:03:51 +0000 2022",
+    "text": "@AbdullahiNugwa Sorry about that...Abuja fuel scarcity is just stressing....I've been on the queue since 6am at lugbe",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Wed Nov 09 20:31:04 +0000 2022",
+    "text": "@BashirAhmaad Good to know. \nThere is no fuel in Abuja that’s the one that is pressing at the moment.",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Wed Nov 09 19:13:49 +0000 2022",
+    "text": "@ZeezyOnuja No fuel In Abuja 🙄",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Tue Nov 08 08:01:08 +0000 2022",
+    "text": "Abuja Fuel Scarcity is Loud Gan....",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Mon Nov 07 10:08:30 +0000 2022",
+    "text": "@cliffs_of @PoojaMedia As many cried when buhari won..does that didn't cry are buying fuel in Abuja for 20 naira per liter",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Sun Nov 06 16:44:36 +0000 2022",
+    "text": "Where can I get fuel in Abuja?",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Sun Nov 06 15:31:45 +0000 2022",
+    "text": "@henryshield NNPC official pump price is now N179 in Abuja.",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Sun Nov 06 11:33:11 +0000 2022",
+    "text": "Where are you people buying fuel in Abuja 🤲",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Sat Nov 05 12:38:51 +0000 2022",
+    "text": "Abuja fuel scarcity issue is becoming really annoying .All this touts and some fuel attendants feeling like Demi gods😡",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  },
+  {
+    "created_at": "Sat Nov 05 06:41:58 +0000 2022",
+    "text": "This is what one has to endure to buy fuel in Abuja https://t.co/JYC80WTjpV",
+    "truncated": false,
+    "geo": null,
+    "coordinates": null,
+    "place": null
+  }
+]
