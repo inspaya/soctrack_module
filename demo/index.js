@@ -113,7 +113,7 @@ function initMap() {
   // Add markers
   positiveCoords.forEach((item, index) => {
     markerObject = new google.maps.Marker();
-    markerObject.setPosition({ lat: item.lng, lng: item.lat });
+    markerObject.setPosition({ lat: item.lat, lng: item.lng });
     markerObject.setIcon('./Happy.png');
     markerObject.setMap(map);
     markerObject.addListener("mouseover", () => {
@@ -121,13 +121,11 @@ function initMap() {
         previouslyOpenedInfoWindow.close();
       }
 
-      infoWindow.setContent(`${item.text} at lat: ${item.lng} and lng: ${item.lat}`);
+      infoWindow.setContent(`${item.text} at lat: ${item.lat} and lng: ${item.lng}`);
       previouslyOpenedInfoWindow = infoWindow
       // map.panTo({ lat: item.lat, lng: item.lng })
       // map.setZoom(15)
-      infoWindow.open({
-        anchor: markerObject, map, shouldFocus: true,
-      });
+      infoWindow.open({map, shouldFocus: true,});
     });
   });
 
@@ -145,9 +143,7 @@ function initMap() {
       previouslyOpenedInfoWindow = infoWindow
       // map.panTo({ lat: item.lat, lng: item.lng })
       // map.setZoom(12)
-      infoWindow.open({
-        anchor: markerObject, map, shouldFocus: true,
-      });
+      infoWindow.open({map, shouldFocus: true,});
     });
   });
 
@@ -165,9 +161,7 @@ function initMap() {
       previouslyOpenedInfoWindow = infoWindow
       // map.panTo({ lat: item.lat, lng: item.lng })
       // map.setZoom(15)
-      infoWindow.open({
-        anchor: markerObject, map, shouldFocus: true,
-      });
+      infoWindow.open({map, shouldFocus: true,});
     });
   });
 
