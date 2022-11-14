@@ -114,7 +114,7 @@ function initMap() {
   positiveCoords.forEach((item, index) => {
     markerObject = new google.maps.Marker();
     markerObject.setPosition({ lat: item.lat, lng: item.lng });
-    markerObject.setIcon('../assets/Happy.png');
+    markerObject.setIcon('./Happy.png');
     markerObject.setMap(map);
     markerObject.addListener("click", () => {
       if (previouslyOpenedInfoWindow) {
@@ -134,7 +134,7 @@ function initMap() {
   negativeCoords.forEach((item, index) => {
     markerObject = new google.maps.Marker();
     markerObject.setPosition({ lat: item.lat, lng: item.lng });
-    markerObject.setIcon('../assets/Hate.png');
+    markerObject.setIcon('./Hate.png');
     markerObject.setMap(map);
     markerObject.addListener("click", () => {
       if (previouslyOpenedInfoWindow) {
@@ -154,7 +154,7 @@ function initMap() {
   neutralCoords.forEach((item, index) => {
     markerObject = new google.maps.Marker();
     markerObject.setPosition({ lat: item.lat, lng: item.lng });
-    markerObject.setIcon('../assets/Sad.png');
+    markerObject.setIcon('./Sad.png');
     markerObject.setMap(map);
     markerObject.addListener("click", () => {
       if (previouslyOpenedInfoWindow) {
