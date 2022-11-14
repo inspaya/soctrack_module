@@ -133,7 +133,11 @@ function initMap() {
   negativeCoords.forEach((item, index) => {
     markerObject = new google.maps.Marker();
     latLng = { lat: item.lat, lng: item.lng }
-    latLngAddress = geocoder.geocode({location: latLng}).then((response) => {response.results[0].formatted_address})
+    latLngAddress = geocoder.geocode({location: latLng}).then((response) => {
+      if (response.results[0]) {
+        response.results[0].formatted_address
+      }
+    });
     markerObject.setPosition(latLng);
     markerObject.setIcon('./Hate.png');
     markerObject.setMap(map);
