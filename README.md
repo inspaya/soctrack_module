@@ -29,7 +29,7 @@ The product site is available at https://ask.ngmap.live/
 * HTML/CSS/JavaScript
 * Google Maps Platform APIs used:
   * Dynamic Maps (JS) [Shapes]
-  * Geocoding (we planned to use this but had some bugs on the backend, and didn't get to it)
+  * Geocoding (Reverse)
 * Google Cloud Natural Language API
   * Sentiment Analysis
 * HTML
