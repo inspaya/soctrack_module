@@ -10,7 +10,9 @@ Users can enter search terms used to query this service. Such queries are then l
 ## Challenges we ran into
 * Delays in getting Twitter Developer accounts approved, so we used some mock data.
 * Using data that is missing geo-information
-* Limitations in correctly assessing the sentiment behind a text due to the use of local slangs that are incorrectly analysed by Google Cloud Natural Language API 
+* Limitations in correctly assessing the sentiment behind a text due to the use of local slangs that are incorrectly analysed by Google Cloud Natural Language API
+* Ran into some bugs on the backend service a day before the deadline and so we had to disable the backend search service.
+* Ran into some bugs with the Promise returned from the Geocoding service. Code needs a lot of refactor and future versions will probably have this reverse geocoding done on the backend instead.
 
 ## Accomplishments that we're proud of
 * The ability to visualize the sentiment behind responses on the map and further group those sentiments by the pre-dominant sentiment on the specific topic for a given area.
