@@ -52,7 +52,7 @@ var response = {
 }
 var previouslyOpenedInfoWindow = false;
 let map;
-const nigeria = { lat: 9.0065205, lng: 7.491302};
+const nigeria = { lat: 9.0065205, lng: 7.491302 };
 
 let neg = [];
 let pos = [];
@@ -126,16 +126,16 @@ function initMap() {
 
       infoWindow.setContent(`${item.text} at lat: ${item.lat} and lng: ${item.lng}`);
       previouslyOpenedInfoWindow = infoWindow
-      infoWindow.open({map, shouldFocus: true,});
+      infoWindow.open({ map, shouldFocus: true, });
     });
   });
 
   negativeCoords.forEach((item, index) => {
     markerObject = new google.maps.Marker();
     latLng = { lat: item.lat, lng: item.lng }
-    latLngAddress = geocoder.geocode({location: latLng}).then((response) => {
+    geocoder.geocode({ location: latLng }).then((response) => {
       if (response.results[0]) {
-        response.results[0].formatted_address
+        infoWindow.setContent(`${item.text} at ${response.results[0].formatted_address}`);
       }
     });
     markerObject.setPosition(latLng);
@@ -146,10 +146,8 @@ function initMap() {
         previouslyOpenedInfoWindow.close();
       }
 
-
-      infoWindow.setContent(`${item.text} at ${latLngAddress}`);
       previouslyOpenedInfoWindow = infoWindow
-      infoWindow.open({map, shouldFocus: true,});
+      infoWindow.open({ map, shouldFocus: true, });
     });
   });
 
@@ -165,7 +163,7 @@ function initMap() {
 
       infoWindow.setContent(`${item.text} at lat: ${item.lat} and lng: ${item.lng}`);
       previouslyOpenedInfoWindow = infoWindow
-      infoWindow.open({map, shouldFocus: true,});
+      infoWindow.open({ map, shouldFocus: true, });
     });
   });
 
