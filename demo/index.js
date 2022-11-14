@@ -107,6 +107,9 @@ function initMap() {
   const negativeCoords = neg;
   const neutralCoords = nue;
 
+  // Geocoder Object
+  const geocoder = new google.maps.Geocoder();
+
   // InfoWindow Object
   infoWindow = new google.maps.InfoWindow();
 
@@ -123,15 +126,15 @@ function initMap() {
 
       infoWindow.setContent(`${item.text} at lat: ${item.lat} and lng: ${item.lng}`);
       previouslyOpenedInfoWindow = infoWindow
-      // map.panTo({ lat: item.lat, lng: item.lng })
-      // map.setZoom(15)
       infoWindow.open({map, shouldFocus: true,});
     });
   });
 
   negativeCoords.forEach((item, index) => {
     markerObject = new google.maps.Marker();
-    markerObject.setPosition({ lat: item.lat, lng: item.lng });
+    latLng = { lat: item.lat, lng: item.lng }
+    latLngAddress = geocoder.geocode({location: latLng}).then((response) => {response.results[0].formatted_address})
+    markerObject.setPosition(latLng);
     markerObject.setIcon('./Hate.png');
     markerObject.setMap(map);
     markerObject.addListener("mouseover", () => {
@@ -139,10 +142,9 @@ function initMap() {
         previouslyOpenedInfoWindow.close();
       }
 
-      infoWindow.setContent(`${item.text} at lat: ${item.lat} and lng: ${item.lng}`);
+
+      infoWindow.setContent(`${item.text} at ${latLngAddress}`);
       previouslyOpenedInfoWindow = infoWindow
-      // map.panTo({ lat: item.lat, lng: item.lng })
-      // map.setZoom(12)
       infoWindow.open({map, shouldFocus: true,});
     });
   });
@@ -159,8 +161,6 @@ function initMap() {
 
       infoWindow.setContent(`${item.text} at lat: ${item.lat} and lng: ${item.lng}`);
       previouslyOpenedInfoWindow = infoWindow
-      // map.panTo({ lat: item.lat, lng: item.lng })
-      // map.setZoom(15)
       infoWindow.open({map, shouldFocus: true,});
     });
   });
