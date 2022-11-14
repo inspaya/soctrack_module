@@ -98,7 +98,7 @@ function getCordinates(response) {
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: nigeria,
-    zoom: 11,
+    zoom: 12,
   });
 
   getCordinates(response);
@@ -125,7 +125,7 @@ function initMap() {
       previouslyOpenedInfoWindow = infoWindow
       map.panTo({ lat: item.lat, lng: item.lng })
       map.setZoom(15)
-      markerInfoWindow.open({
+      infoWindow.open({
         anchor: marker, map, shouldFocus: true,
       });
     });
@@ -145,7 +145,7 @@ function initMap() {
       previouslyOpenedInfoWindow = infoWindow
       map.panTo({ lat: item.lat, lng: item.lng })
       map.setZoom(15)
-      markerInfoWindow.open({
+      infoWindow.open({
         anchor: marker, map, shouldFocus: true,
       });
     });
@@ -165,7 +165,7 @@ function initMap() {
       previouslyOpenedInfoWindow = infoWindow
       map.panTo({ lat: item.lat, lng: item.lng })
       map.setZoom(15)
-      markerInfoWindow.open({
+      infoWindow.open({
         anchor: marker, map, shouldFocus: true,
       });
     });
