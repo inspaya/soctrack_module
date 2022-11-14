@@ -64,6 +64,7 @@ function getCordinates(response) {
   cordData.forEach(element => {
     element.positive.forEach(item => {
       let x = {
+        'text': item.text,
         'lat': item.lat,
         'lng': item.lng
       }
@@ -72,6 +73,7 @@ function getCordinates(response) {
 
     element.negative.forEach(item => {
       let x = {
+        'text': item.text,
         'lat': item.lat,
         'lng': item.lng
       }
@@ -80,6 +82,7 @@ function getCordinates(response) {
 
     element.neutral.forEach(item => {
       let x = {
+        'text': item.text,
         'lat': item.lat,
         'lng': item.lng
       }
@@ -87,9 +90,9 @@ function getCordinates(response) {
     })
   });
 
-  console.log(neg)
-  console.log(pos)
-  console.log(nue)
+  console.log(neg);
+  console.log(pos);
+  console.log(nue);
 }
 
 function initMap() {
@@ -103,6 +106,71 @@ function initMap() {
   const positiveCoords = pos;
   const negativeCoords = neg;
   const neutralCoords = nue;
+
+  // InfoWindow Object
+  infoWindow = new google.maps.InfoWindow();
+
+  // Add markers
+  positiveCoords.forEach((item, index) => {
+    markerObject = new google.maps.Marker();
+    markerObject.setPosition({ lat: item.lat, lng: item.lng });
+    markerObject.setIcon('../assets/Happy.png');
+    markerObject.setMap(map);
+    markerObject.addListener("click", () => {
+      if (previouslyOpenedInfoWindow) {
+        previouslyOpenedInfoWindow.close();
+      }
+
+      infoWindow.setContent(item.text);
+      previouslyOpenedInfoWindow = infoWindow
+      map.panTo({ lat: item.lat, lng: item.lng })
+      map.setZoom(15)
+      markerInfoWindow.open({
+        anchor: marker, map, shouldFocus: true,
+      });
+    });
+  });
+
+  negativeCoords.forEach((item, index) => {
+    markerObject = new google.maps.Marker();
+    markerObject.setPosition({ lat: item.lat, lng: item.lng });
+    markerObject.setIcon('../assets/Hate.png');
+    markerObject.setMap(map);
+    markerObject.addListener("click", () => {
+      if (previouslyOpenedInfoWindow) {
+        previouslyOpenedInfoWindow.close();
+      }
+
+      infoWindow.setContent(item.text);
+      previouslyOpenedInfoWindow = infoWindow
+      map.panTo({ lat: item.lat, lng: item.lng })
+      map.setZoom(15)
+      markerInfoWindow.open({
+        anchor: marker, map, shouldFocus: true,
+      });
+    });
+  });
+
+  neutralCoords.forEach((item, index) => {
+    markerObject = new google.maps.Marker();
+    markerObject.setPosition({ lat: item.lat, lng: item.lng });
+    markerObject.setIcon('../assets/Sad.png');
+    markerObject.setMap(map);
+    markerObject.addListener("click", () => {
+      if (previouslyOpenedInfoWindow) {
+        previouslyOpenedInfoWindow.close();
+      }
+
+      infoWindow.setContent(item.text);
+      previouslyOpenedInfoWindow = infoWindow
+      map.panTo({ lat: item.lat, lng: item.lng })
+      map.setZoom(15)
+      markerInfoWindow.open({
+        anchor: marker, map, shouldFocus: true,
+      });
+    });
+  });
+
 
   const positivePolygon = new google.maps.Polygon({
     paths: positiveCoords,
@@ -138,8 +206,6 @@ function initMap() {
   positivePolygon.addListener("click", showPositiveMood);
   negativePolygon.addListener("click", showNegativeMood);
   neutralPolygon.addListener("click", showNeutralMood);
-  
-  infoWindow = new google.maps.InfoWindow();
 }
 
 function showPositiveMood(event) {
