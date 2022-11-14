@@ -137,6 +137,9 @@ function initMap() {
       if (response.results[0]) {
         infoWindow.setContent(`${item.text} at ${response.results[0].formatted_address}`);
       }
+    }).catch((e) => {
+      console.log("Geocode failed due to: " + e);
+      infoWindow.setContent(`${item.text}`)
     });
     markerObject.setPosition(latLng);
     markerObject.setIcon('./Hate.png');
