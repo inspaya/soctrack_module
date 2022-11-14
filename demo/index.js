@@ -116,14 +116,14 @@ function initMap() {
     markerObject.setPosition({ lat: item.lat, lng: item.lng });
     markerObject.setIcon('./Happy.png');
     markerObject.setMap(map);
-    markerObject.addListener("click", () => {
+    markerObject.addListener("mouseover", () => {
       if (previouslyOpenedInfoWindow) {
         previouslyOpenedInfoWindow.close();
       }
 
       infoWindow.setContent(item.text);
       previouslyOpenedInfoWindow = infoWindow
-      map.panTo({ lat: item.lat, lng: item.lng })
+      // map.panTo({ lat: item.lat, lng: item.lng })
       map.setZoom(15)
       infoWindow.open({
         anchor: markerObject, map, shouldFocus: true,
@@ -136,14 +136,14 @@ function initMap() {
     markerObject.setPosition({ lat: item.lat, lng: item.lng });
     markerObject.setIcon('./Hate.png');
     markerObject.setMap(map);
-    markerObject.addListener("click", () => {
+    markerObject.addListener("mouseover", () => {
       if (previouslyOpenedInfoWindow) {
         previouslyOpenedInfoWindow.close();
       }
 
       infoWindow.setContent(item.text);
       previouslyOpenedInfoWindow = infoWindow
-      map.panTo({ lat: item.lat, lng: item.lng })
+      // map.panTo({ lat: item.lat, lng: item.lng })
       map.setZoom(15)
       infoWindow.open({
         anchor: markerObject, map, shouldFocus: true,
@@ -156,14 +156,14 @@ function initMap() {
     markerObject.setPosition({ lat: item.lat, lng: item.lng });
     markerObject.setIcon('./Sad.png');
     markerObject.setMap(map);
-    markerObject.addListener("click", () => {
+    markerObject.addListener("mouseover", () => {
       if (previouslyOpenedInfoWindow) {
         previouslyOpenedInfoWindow.close();
       }
 
       infoWindow.setContent(item.text);
       previouslyOpenedInfoWindow = infoWindow
-      map.panTo({ lat: item.lat, lng: item.lng })
+      // map.panTo({ lat: item.lat, lng: item.lng })
       map.setZoom(15)
       infoWindow.open({
         anchor: markerObject, map, shouldFocus: true,
