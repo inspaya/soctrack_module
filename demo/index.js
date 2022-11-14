@@ -126,7 +126,7 @@ function initMap() {
       map.panTo({ lat: item.lat, lng: item.lng })
       map.setZoom(15)
       infoWindow.open({
-        anchor: marker, map, shouldFocus: true,
+        anchor: markerObject, map, shouldFocus: true,
       });
     });
   });
@@ -146,7 +146,7 @@ function initMap() {
       map.panTo({ lat: item.lat, lng: item.lng })
       map.setZoom(15)
       infoWindow.open({
-        anchor: marker, map, shouldFocus: true,
+        anchor: markerObject, map, shouldFocus: true,
       });
     });
   });
@@ -166,7 +166,7 @@ function initMap() {
       map.panTo({ lat: item.lat, lng: item.lng })
       map.setZoom(15)
       infoWindow.open({
-        anchor: marker, map, shouldFocus: true,
+        anchor: markerObject, map, shouldFocus: true,
       });
     });
   });
