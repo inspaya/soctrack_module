@@ -121,7 +121,7 @@ function initMap() {
         previouslyOpenedInfoWindow.close();
       }
 
-      infoWindow.setContent(item.text);
+      infoWindow.setContent(`${item.text} at lat: ${item.lat} and lng: ${item.lng}`);
       previouslyOpenedInfoWindow = infoWindow
       // map.panTo({ lat: item.lat, lng: item.lng })
       // map.setZoom(15)
@@ -141,7 +141,7 @@ function initMap() {
         previouslyOpenedInfoWindow.close();
       }
 
-      infoWindow.setContent(item.text);
+      infoWindow.setContent(`${item.text} at lat: ${item.lat} and lng: ${item.lng}`);
       previouslyOpenedInfoWindow = infoWindow
       // map.panTo({ lat: item.lat, lng: item.lng })
       // map.setZoom(12)
@@ -161,7 +161,7 @@ function initMap() {
         previouslyOpenedInfoWindow.close();
       }
 
-      infoWindow.setContent(item.text);
+      infoWindow.setContent(`${item.text} at lat: ${item.lat} and lng: ${item.lng}`);
       previouslyOpenedInfoWindow = infoWindow
       // map.panTo({ lat: item.lat, lng: item.lng })
       // map.setZoom(15)
