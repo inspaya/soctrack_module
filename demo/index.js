@@ -116,7 +116,16 @@ function initMap() {
   // Add markers
   positiveCoords.forEach((item, index) => {
     markerObject = new google.maps.Marker();
-    markerObject.setPosition({ lat: item.lat, lng: item.lng });
+    latLng = { lat: item.lat, lng: item.lng }
+    geocoder.geocode({ location: latLng }).then((response) => {
+      if (response.results[0]) {
+        infoWindow.setContent(`${item.text} at ${response.results[0].formatted_address}`);
+      }
+    }).catch((e) => {
+      console.log("Geocode failed due to: " + e);
+      infoWindow.setContent(`${item.text}`)
+    });
+    markerObject.setPosition(latLng);
     markerObject.setIcon('./Happy.png');
     markerObject.setMap(map);
     markerObject.addListener("mouseover", () => {
@@ -156,7 +165,16 @@ function initMap() {
 
   neutralCoords.forEach((item, index) => {
     markerObject = new google.maps.Marker();
-    markerObject.setPosition({ lat: item.lat, lng: item.lng });
+    latLng = { lat: item.lat, lng: item.lng }
+    geocoder.geocode({ location: latLng }).then((response) => {
+      if (response.results[0]) {
+        infoWindow.setContent(`${item.text} at ${response.results[0].formatted_address}`);
+      }
+    }).catch((e) => {
+      console.log("Geocode failed due to: " + e);
+      infoWindow.setContent(`${item.text}`)
+    });
+    markerObject.setPosition(latLng);
     markerObject.setIcon('./Sad.png');
     markerObject.setMap(map);
     markerObject.addListener("mouseover", () => {
