@@ -11,7 +11,7 @@ Fairly similar to how we built the eNaira Merchant Map demo website, https://ena
 
 ## Competition Category
 
-Data Visualization - Let data tell a unique story. Help make decisions and improve overall operational efficiencies by displaying data on your map. 
+Data Visualization - Let data tell a unique story. Help make decisions and improve overall operational efficiencies by displaying data on your map. Our submission can be found at [SocTrack on DevPost](https://devpost.com/software/soctrack)
 
 ## The Output
 
