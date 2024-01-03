@@ -1,3 +1,5 @@
+[![Ceasefire Now](https://badge.techforpalestine.org/ceasefire-now)](https://techforpalestine.org/learn-more)
+
 # SocTrack
 
 ## Gauging the mood of people in a given area based on conversations they are having
